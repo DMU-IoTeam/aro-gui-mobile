@@ -36,6 +36,10 @@ export default function RootLayout() {
       <ThemeProvider value={MyTheme}>
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="MedicineScreen" options={{ headerShown: false }} />
+          <Stack.Screen name="ChatScreen" options={{ headerShown: false }} />
+          <Stack.Screen name="HealthScreen" options={{ headerShown: false }} />
+          <Stack.Screen name="GameScreen" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

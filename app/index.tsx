@@ -3,7 +3,6 @@ import Header from '@/components/index/Header';
 import Menu from '@/components/index/Menu';
 import Profile from '@/components/index/Profile';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -15,17 +14,3 @@ export default function HomeScreen() {
     </SafeAreaContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    // SafeAreaContainer에 추가로 적용할 스타일
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-});
