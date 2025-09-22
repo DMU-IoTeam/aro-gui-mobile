@@ -1,14 +1,14 @@
 import { Colors } from "@/constants/Colors";
 import React, { useState } from "react";
 import {
-  Image,
-  ImageSourcePropType,
-  Pressable,
-  StyleProp,
-  Text,
-  TextStyle,
-  View,
-  ViewStyle,
+    Image,
+    ImageSourcePropType,
+    Pressable,
+    StyleProp,
+    Text,
+    TextStyle,
+    View,
+    ViewStyle,
 } from "react-native";
 
 type menuItem = {
@@ -22,7 +22,7 @@ type reportProps = {
   contents: menuItem[];
 };
 
-export default function DailyReport({ title, contents }: reportProps) {
+export default function DailyMedicine({ title, contents }: reportProps) {
   const [selections, setSelections] = useState<{
     [key: number]: string | null;
   }>({});
@@ -48,8 +48,8 @@ export default function DailyReport({ title, contents }: reportProps) {
       </Text>
       {contents.map((value, index) => {
         const selectedOption = selections[index];
-        const isGoodActive = selectedOption === "좋음";
-        const isBadActive = selectedOption === "좋지않음";
+        const isGoodActive = selectedOption === "먹음";
+        const isBadActive = selectedOption === "안먹음";
 
         return (
           <View
@@ -93,13 +93,13 @@ export default function DailyReport({ title, contents }: reportProps) {
               style={{ flexDirection: "row", gap: 20, marginTop: 10, flex1: 1 }}
             >
               <ReportButton
-                onPress={() => handleSelect(index, "좋음")}
+                onPress={() => handleSelect(index, "먹음")}
                 imageUrl={
                   isGoodActive
                     ? require("assets/images/check-white.png")
                     : require("assets/images/check-green.png")
                 }
-                text="좋음"
+                text="먹음"
                 style={{
                   backgroundColor: isGoodActive ? "#10B981" : "#F3F4F6",
                   borderColor: "#10B981",
@@ -108,13 +108,13 @@ export default function DailyReport({ title, contents }: reportProps) {
                 textStyle={{ color: isGoodActive ? "white" : "#10B981" }}
               />
               <ReportButton
-                onPress={() => handleSelect(index, "좋지않음")}
+                onPress={() => handleSelect(index, "안먹음")}
                 imageUrl={
                   isBadActive
                     ? require("assets/images/close.png")
                     : require("assets/images/close-red.png")
                 }
-                text="좋지않음"
+                text="안먹음"
                 style={{
                   backgroundColor: isBadActive ? "#EF4444" : "#F3F4F6",
                   borderColor: "#EF4444",
