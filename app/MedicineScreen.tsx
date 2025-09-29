@@ -4,25 +4,25 @@ import DailyMedicine from "@/components/MedicineScreen/DailyMedicine";
 
 const data = [
   {
-    title: "혈압약",
+    title: "고혈압약",
     imageUrl: require("assets/images/health-icon1.png"),
     contents: "1정, 식후 30분",
   },
-  {
-    title: "당뇨약",
-    imageUrl: require("assets/images/health-icon2.png"),
-    contents: "1정, 식후 30분",
-  },
-  {
-    title: "간수치약",
-    imageUrl: require("assets/images/health-icon3.png"),
-    contents: "1정, 식후 30분",
-  },
-  {
-    title: "녹내장약",
-    imageUrl: require("assets/images/health-icon4.png"),
-    contents: "1정, 식후 30분",
-  },
+  // {
+  //   title: "당뇨약",
+  //   imageUrl: require("assets/images/health-icon2.png"),
+  //   contents: "1정, 식후 30분",
+  // },
+  // {
+  //   title: "간수치약",
+  //   imageUrl: require("assets/images/health-icon3.png"),
+  //   contents: "1정, 식후 30분",
+  // },
+  // {
+  //   title: "녹내장약",
+  //   imageUrl: require("assets/images/health-icon4.png"),
+  //   contents: "1정, 식후 30분",
+  // },
 ];
 
 export default function MedicineScreen() {
